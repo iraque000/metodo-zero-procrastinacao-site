@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Método Zero Procrastinação - Página Oficial</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #ffffff, #f8f9fc);
+    margin: 0;
+    color: #1f1f1f;
+    text-align: center;
+  }
+
+  header {
+    background: linear-gradient(90deg, #004aad, #007bff);
+    color: white;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in;
+  }
+
+  h1 { font-size: 2.4em; margin-bottom: 10px; }
+  h2 { color: #004aad; }
+  p { line-height: 1.6; font-size: 1.1em; }
+
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .highlight { color: #004aad; font-weight: bold; }
+  .cta-button {
+    display: inline-block;
+    background-color: #ffae00;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+  }
+  .cta-button:hover {
+    background-color: #ffc933;
+    transform: scale(1.05);
+  }
+
+  .price {
+    background: #004aad;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  .bonus {
+    background: #e9f3ff;
+    border-left: 5px solid #004aad;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+
+  .countdown {
+    font-size: 2em;
+    color: #ffae00;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  footer {
+    background: #004aad;
+    color: white;
+    padding: 40px 20px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚫 Chega de Adiar a Sua Vida!</h1>
+  <p>Descubra o <b>Método Zero Procrastinação</b> e recupere o controle da sua rotina 💪</p>
+</header>
+
+<section>
+  <h2>💡 O Que Você Vai Aprender</h2>
+  <p>O <b>Método Zero Procrastinação</b> é um guia prático e poderoso com 12 capítulos que mostram:</p>
+  <ul>
+    <li>🧠 Como entender e vencer os gatilhos da procrastinação</li>
+    <li>⚡ Técnicas para agir mesmo sem motivação</li>
+    <li>🎯 Como criar uma rotina de alta performance</li>
+    <li>🚀 Exercícios mentais para manter o foco e a disciplina</li>
+  </ul>
+</section>
+
+<section>
+  <h2>💬 Depoimentos de Quem Já Transformou a Vida</h2>
+  <p>“Consegui organizar meus estudos e parei de adiar tudo!” — <b>Carla, 29 anos</b></p>
+  <p>“Eu procrastinava meu trabalho há meses. Agora sou outra pessoa.” — <b>Lucas, 31 anos</b></p>
+  <p>“Esse livro me fez agir! Um tapa na cara com carinho.” — <b>Joana, 24 anos</b></p>
+</section>
+
+<section>
+  <h2>🔥 Oferta Especial de Lançamento</h2>
+  <div class="price">
+    <p>De <del>R$ 67,80</del> por apenas <b>R$ 29,90</b> 😱</p>
+    <p><small>*Promoção válida até hoje às 23h59*</small></p>
+  </div>
+
+  <div class="countdown" id="countdown">00:00:00</div>
+
+  <div class="bonus">
+    <p>🎁 <b>Bônus Exclusivo:</b> Mini Guia “21 Dias de Foco Total” incluído gratuitamente!</p>
+  </div>
+
+  <a href="https://seulinkhotmart.com" class="cta-button">🔥 QUERO PARAR DE PROCRASTINAR AGORA 🔥</a>
+</section>
+
+<section>
+  <h2>👤 Sobre o Autor</h2>
+  <p><b>Caio Martins</b> — especialista em performance mental e criador do <i>Método Zero Procrastinação</i>.</p>
+  <p>Depois de anos lutando contra a procrastinação, ele desenvolveu um método prático que ajuda qualquer pessoa a recuperar o foco e a disciplina.</p>
+</section>
+
+<footer>
+  <p>📘 Método Zero Procrastinação — transforme sua mente e sua rotina.</p>
+  <a href="https://seulinkhotmart.com" class="cta-button">GARANTIR MEU E-BOOK AGORA</a>
+  <p style="margin-top:20px; font-size:0.9em;">© 2025 Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  function atualizarContagem() {
+    const agora = new Date();
+    const fim = new Date();
+    fim.setHours(23, 59, 59, 999);
+    const distancia = fim - agora;
+
+    const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((distancia / (1000 * 60)) % 60);
+    const segundos = Math.floor((distancia / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+      (horas < 10 ? "0" + horas : horas) + ":" +
+      (minutos < 10 ? "0" + minutos : minutos) + ":" +
+      (segundos < 10 ? "0" + segundos : segundos);
+
+    if (distancia < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "🚫 Promoção Encerrada";
+      document.querySelector(".cta-button").innerText = "Ver próxima oferta";
+    }
+  }
+
+  const timer = setInterval(atualizarContagem, 1000);
+  atualizarContagem();
+</script>
+
+</body>
+</html>
