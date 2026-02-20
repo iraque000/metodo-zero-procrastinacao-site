@@ -19,15 +19,8 @@ padding:80px 20px;
 background:linear-gradient(135deg,#0ea5e9,#1e3a8a);
 }
 
-h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.sub{
-font-size:20px;
-opacity:0.9;
-}
+h1{font-size:42px;}
+.sub{font-size:20px;opacity:0.9;}
 
 .section{
 padding:60px 20px;
@@ -68,10 +61,7 @@ font-weight:bold;
 color:#22c55e;
 }
 
-.old{
-text-decoration:line-through;
-opacity:0.6;
-}
+.old{text-decoration:line-through;opacity:0.6;}
 
 .timer{
 font-size:26px;
@@ -87,42 +77,73 @@ color:#fb7185;
 font-weight:bold;
 }
 
-footer{
-padding:40px;
-opacity:0.6;
-}
+footer{padding:40px;opacity:0.6;}
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 <h1>Pare de Procrastinar Hoje</h1>
-<p class="sub">Transforme ação em hábito automático mesmo sem motivação</p>
-<a class="btn" href="https://go.hotmart.com/Y102893297N">QUERO COMEÇAR AGORA</a>
+<p class="sub">Mesmo sem motivação, força de vontade ou disciplina</p>
+<a class="btn" href="#oferta">QUERO MUDAR AGORA</a>
 </section>
 
+<!-- PROBLEMA -->
 <section class="section">
-<h2>Você sente que poderia fazer muito mais… mas não consegue começar?</h2>
+<h2>Se isso acontece com você, não é falta de capacidade</h2>
 
 <div class="card">
-<p>❌ Falta de foco</p>
-<p>❌ Ansiedade antes de tarefas</p>
-<p>❌ Procrastinação constante</p>
-<p>❌ Culpa por adiar decisões</p>
-</div>
-
-<div class="card">
-<h2>O Método Zero Procrastinação resolve isso com:</h2>
-<p>✔ Técnica de ação imediata</p>
-<p>✔ Sistema simples de foco diário</p>
-<p>✔ Plano de transformação em 7 dias</p>
-<p>✔ Controle mental prático</p>
+<p>❌ Você sabe o que precisa fazer, mas trava</p>
+<p>❌ Começa animado e abandona</p>
+<p>❌ Vive cansado e ansioso</p>
+<p>❌ Se culpa por não agir</p>
 </div>
 </section>
 
+<!-- SOLUÇÃO -->
 <section class="section">
-<h2>Oferta Especial Liberada</h2>
+<h2>O Método Zero Procrastinação</h2>
+
+<div class="card">
+<p>✔ Sistema simples de ação imediata</p>
+<p>✔ Técnicas para destravar a mente</p>
+<p>✔ Organização sem pressão</p>
+<p>✔ Foco diário automático</p>
+</div>
+</section>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="section">
+<h2>O que você vai receber</h2>
+
+<div class="card">
+<p>📘 E-book Método Zero Procrastinação</p>
+<p>📄 Checklist Anti-Procrastinação</p>
+<p>🗓 Plano de Foco de 7 Dias</p>
+<p>🎧 Áudio-guia para iniciar tarefas</p>
+</div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="section">
+<h2>Resultados de quem aplicou</h2>
+
+<div class="card">
+<p>"Voltei a estudar todos os dias depois de anos travado."</p>
+</div>
+<div class="card">
+<p>"Hoje consigo começar tarefas sem sofrimento."</p>
+</div>
+<div class="card">
+<p>"Minha produtividade no trabalho mudou completamente."</p>
+</div>
+</section>
+
+<!-- OFERTA FINAL -->
+<section class="section" id="oferta">
+<h2>Oferta Especial por Tempo Limitado</h2>
 
 <div class="card">
 <p class="old">De R$147,00</p>
@@ -131,33 +152,7 @@ opacity:0.6;
 <div class="timer" id="timer"></div>
 <div class="vagas" id="vagas"></div>
 
-<a class="btn" href="https://go.hotmart.com/Y102893297N">GARANTIR MEU ACESSO</a>
-</div>
-</section>
-
-<section class="section">
-<h2>Resultados Reais</h2>
-
-<div class="card">
-<p>"Voltei a estudar todos os dias depois de anos travado."</p>
-</div>
-
-<div class="card">
-<p>"Hoje consigo começar tarefas sem sofrimento."</p>
-</div>
-
-<div class="card">
-<p>"Minha produtividade no trabalho mudou completamente."</p>
-</div>
-</section>
-
-<section class="section">
-<h2>Bônus Exclusivos</h2>
-
-<div class="card">
-<p>✔ Checklist Anti-Procrastinação</p>
-<p>✔ Plano de Foco de 7 Dias</p>
-<p>✔ Áudio-guia para ação imediata</p>
+<a class="btn" href="https://go.hotmart.com/Y102893297N">GARANTIR MEU ACESSO AGORA</a>
 </div>
 </section>
 
@@ -190,9 +185,7 @@ document.getElementById("timer").innerHTML = "Promoção encerrada";
 setInterval(atualizarContador, 1000);
 
 function atualizarVagas(){
-if(vagas > 5){
-vagas--;
-}
+if(vagas > 5){vagas--;}
 document.getElementById("vagas").innerHTML =
 "⚠ Restam apenas " + vagas + " acessos promocionais";
 }
