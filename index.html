@@ -20,30 +20,13 @@ background:linear-gradient(135deg,#0ea5e9,#1e3a8a);
 }
 
 h1{
-font-size:40px;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .sub{
 font-size:20px;
 opacity:0.9;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#22c55e;
-color:white;
-font-size:20px;
-border-radius:8px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-background:#16a34a;
 }
 
 .section{
@@ -55,13 +38,34 @@ margin:auto;
 .card{
 background:#1e293b;
 padding:30px;
-border-radius:12px;
+border-radius:14px;
 margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:18px 40px;
+background:#22c55e;
+color:white;
+font-size:22px;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+transform:scale(1.07);
+background:#16a34a;
 }
 
 .price{
-font-size:28px;
-margin-top:15px;
+font-size:36px;
+font-weight:bold;
+color:#22c55e;
 }
 
 .old{
@@ -73,6 +77,14 @@ opacity:0.6;
 font-size:26px;
 margin-top:15px;
 color:#facc15;
+font-weight:bold;
+}
+
+.vagas{
+margin-top:10px;
+font-size:18px;
+color:#fb7185;
+font-weight:bold;
 }
 
 footer{
@@ -86,7 +98,7 @@ opacity:0.6;
 
 <section class="hero">
 <h1>Pare de Procrastinar Hoje</h1>
-<p class="sub">Um método simples que transforma ação em hábito automático</p>
+<p class="sub">Transforme ação em hábito automático mesmo sem motivação</p>
 <a class="btn" href="https://go.hotmart.com/Y102893297N">QUERO COMEÇAR AGORA</a>
 </section>
 
@@ -97,26 +109,27 @@ opacity:0.6;
 <p>❌ Falta de foco</p>
 <p>❌ Ansiedade antes de tarefas</p>
 <p>❌ Procrastinação constante</p>
-<p>❌ Culpa por não agir</p>
+<p>❌ Culpa por adiar decisões</p>
 </div>
 
 <div class="card">
 <h2>O Método Zero Procrastinação resolve isso com:</h2>
 <p>✔ Técnica de ação imediata</p>
-<p>✔ Controle mental prático</p>
-<p>✔ Sistema de foco diário</p>
+<p>✔ Sistema simples de foco diário</p>
 <p>✔ Plano de transformação em 7 dias</p>
+<p>✔ Controle mental prático</p>
 </div>
 </section>
 
 <section class="section">
-<h2>Oferta Especial</h2>
+<h2>Oferta Especial Liberada</h2>
 
 <div class="card">
 <p class="old">De R$147,00</p>
 <p class="price">Por apenas R$67,80</p>
 
 <div class="timer" id="timer"></div>
+<div class="vagas" id="vagas"></div>
 
 <a class="btn" href="https://go.hotmart.com/Y102893297N">GARANTIR MEU ACESSO</a>
 </div>
@@ -138,31 +151,53 @@ opacity:0.6;
 </div>
 </section>
 
+<section class="section">
+<h2>Bônus Exclusivos</h2>
+
+<div class="card">
+<p>✔ Checklist Anti-Procrastinação</p>
+<p>✔ Plano de Foco de 7 Dias</p>
+<p>✔ Áudio-guia para ação imediata</p>
+</div>
+</section>
+
 <footer>
 Método Zero Procrastinação ©
 </footer>
 
 <script>
-var countDownDate = new Date();
-countDownDate.setHours(countDownDate.getHours() + 2);
+var tempoFinal = new Date();
+tempoFinal.setHours(tempoFinal.getHours() + 2);
 
-var x = setInterval(function() {
-var now = new Date().getTime();
-var distance = countDownDate - now;
+var vagas = 37;
 
-var hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-var minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-var seconds = Math.floor((distance % (1000*60))/1000);
+function atualizarContador(){
+var agora = new Date().getTime();
+var distancia = tempoFinal - agora;
+
+var horas = Math.floor((distancia % (1000*60*60*24))/(1000*60*60));
+var minutos = Math.floor((distancia % (1000*60*60))/(1000*60));
+var segundos = Math.floor((distancia % (1000*60))/1000);
 
 document.getElementById("timer").innerHTML =
-"Oferta termina em: " + hours + "h "
-+ minutes + "m " + seconds + "s";
+"⏳ Oferta expira em: " + horas + "h " + minutos + "m " + segundos + "s";
 
-if (distance < 0){
-clearInterval(x);
-document.getElementById("timer").innerHTML = "Oferta encerrada";
+if(distancia < 0){
+document.getElementById("timer").innerHTML = "Promoção encerrada";
 }
-}, 1000);
+}
+
+setInterval(atualizarContador, 1000);
+
+function atualizarVagas(){
+if(vagas > 5){
+vagas--;
+}
+document.getElementById("vagas").innerHTML =
+"⚠ Restam apenas " + vagas + " acessos promocionais";
+}
+
+setInterval(atualizarVagas, 8000);
 </script>
 
 </body>
